@@ -15,7 +15,7 @@ class Rectangle(Figure):
         print('is area', self.name, self.area)
 
     def get_perimetr(self):
-        self.perimetr = (self.side1 + self.side2) ** 2
+        self.perimetr = (self.side1 + self.side2) * 2
         print('is perimetr', self.name, self.perimetr)
 
 rectangle1 = Rectangle('rectangle1', 2, 4)
