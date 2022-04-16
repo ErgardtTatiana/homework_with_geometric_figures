@@ -11,6 +11,7 @@ class Triangle(Figure):
         self.side1 = side1
         self.side2 = side2
         self.side3 = side3
+
         if (side1 <= 0) or (side2 <= 0) or (side3 <=0):
             raise ValueError('Передана не геометрическая фигура')
         if ((side1) == (side2)) and ((side2) == (side3)):
@@ -19,8 +20,6 @@ class Triangle(Figure):
             raise ValueError('Не выполнено основное правило существования треугольника')
         Triangle.get_square(self)
         Triangle.get_perimetr(self)
-
-
 
     def get_square(self):
         self.hp = (self.side1 + self.side2 + self.side3) / 2
