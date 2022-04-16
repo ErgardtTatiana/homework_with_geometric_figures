@@ -11,12 +11,12 @@ class Triangle(Figure):
         self.side1 = side1
         self.side2 = side2
         self.side3 = side3
+        Triangle.get_square(self)
+        Triangle.get_perimetr(self)
         if ((side1) == (side2)) and ((side2) == (side3)):
             print('Треугольник равносторонний')
         if ((side1 + side2) < side3) or ((side2 + side3) < side1) or ((side1 + side3) < side2):
             raise ValueError('Не выполнено основное правило существования треугольника')
-        Triangle.get_square(self)
-        Triangle.get_perimetr(self)
 
     def get_square(self):
         self.hp = (self.side1 + self.side2 + self.side3) / 2
