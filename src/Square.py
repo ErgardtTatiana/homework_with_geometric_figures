@@ -6,6 +6,8 @@ class Square(Figure):
         super().__init__(name)
         self.name = name
         self.side = side
+        if (side <= 0):
+            raise ValueError('Передана не геометрическая фигура')
         Square.get_square(self)
         Square.get_perimetr(self)
 

@@ -7,6 +7,8 @@ class Rectangle(Figure):
         self.name = name
         self.side1 = side1
         self.side2 = side2
+        if (side2 <= 0) or (side1 <=0):
+            raise ValueError('Передана не геометрическая фигура')
         Rectangle.get_square(self)
         Rectangle.get_perimetr(self)
 
@@ -18,7 +20,7 @@ class Rectangle(Figure):
         self.perimetr = (self.side1 + self.side2) * 2
         print('is perimetr', self.name, self.perimetr)
 
-rectangle1 = Rectangle('rectangle1', 2, 4)
-rectangle2 = Rectangle('rectangle2', 4, 5)
+rectangle1 = Rectangle('rectangle1', 2, 7)
+rectangle2 = Rectangle('rectangle2', 4, 2)
 
 rectangle1.add_area(rectangle2)

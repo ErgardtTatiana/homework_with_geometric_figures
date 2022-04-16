@@ -7,6 +7,8 @@ class Circle(Figure):
         super().__init__(name)
         self.name = name
         self.radius = radius
+        if (radius <= 0):
+            raise ValueError('Передана не геометрическая фигура')
         Circle.get_square(self)
         Circle.get_perimetr(self)
 
@@ -19,6 +21,6 @@ class Circle(Figure):
         print('is perimetr', self.name, self.perimetr)
 
 circle1 = Circle('circle1', 10)
-circle2 = Circle('circle2', 20)
+circle2 = Circle('circle2', 5)
 
-circle1.add_area(circle2)
+

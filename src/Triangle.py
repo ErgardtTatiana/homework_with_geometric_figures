@@ -11,12 +11,16 @@ class Triangle(Figure):
         self.side1 = side1
         self.side2 = side2
         self.side3 = side3
-        Triangle.get_square(self)
-        Triangle.get_perimetr(self)
+        if (side1 <= 0) or (side2 <= 0) or (side3 <=0):
+            raise ValueError('Передана не геометрическая фигура')
         if ((side1) == (side2)) and ((side2) == (side3)):
             print('Треугольник равносторонний')
         if ((side1 + side2) < side3) or ((side2 + side3) < side1) or ((side1 + side3) < side2):
             raise ValueError('Не выполнено основное правило существования треугольника')
+        Triangle.get_square(self)
+        Triangle.get_perimetr(self)
+
+
 
     def get_square(self):
         self.hp = (self.side1 + self.side2 + self.side3) / 2
@@ -30,12 +34,9 @@ class Triangle(Figure):
 
 
 
-triangle1 = Triangle('triangle1', 11, 12, 15)
-triangle2 = Triangle('triangle2', 11, 22, 14)
-triangle3 = Triangle('triangle3', 11, 11, 11)
+triangle1 = Triangle('triangle1', 9, 12, 15)
+triangle2 = Triangle('triangle2', 11, 20, 14)
+triangle3 = Triangle('triangle3', 11, 4, 11)
+triangle1.add_area(triangle2)
 
-# triangle1.add_area(triangle2)
-# if ((side1) == (side2)) and ((side2) == (side3)):
-#     print('Треугольник равносторонний')
-# if ((side1 + side2) >= side3 or (side2 + side3) >= side1 or (side1 + side3) >= side2):
-#     raise ValueError('Не выполнено основное правило существования треугольника')
+
