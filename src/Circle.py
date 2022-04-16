@@ -1,6 +1,7 @@
 from Figure import Figure
 import math
 
+
 class Circle(Figure):
 
     def __init__(self, name, radius):
@@ -20,7 +21,6 @@ class Circle(Figure):
         self.perimetr = 2 * math.pi * self.radius
         print('is perimetr', self.name, self.perimetr)
 
+
 circle1 = Circle('circle1', 10)
 circle2 = Circle('circle2', 5)
-
-

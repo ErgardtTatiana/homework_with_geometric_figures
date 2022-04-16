@@ -1,5 +1,6 @@
 from Figure import Figure
 
+
 class Rectangle(Figure):
 
     def __init__(self, name, side1, side2):
@@ -7,7 +8,7 @@ class Rectangle(Figure):
         self.name = name
         self.side1 = side1
         self.side2 = side2
-        if (side2 <= 0) or (side1 <=0):
+        if (side2 <= 0) or (side1 <= 0):
             raise ValueError('Передана не геометрическая фигура')
         Rectangle.get_square(self)
         Rectangle.get_perimetr(self)
@@ -19,6 +20,7 @@ class Rectangle(Figure):
     def get_perimetr(self):
         self.perimetr = (self.side1 + self.side2) * 2
         print('is perimetr', self.name, self.perimetr)
+
 
 rectangle1 = Rectangle('rectangle1', 2, 7)
 rectangle2 = Rectangle('rectangle2', 4, 2)

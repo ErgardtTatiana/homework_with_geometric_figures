@@ -1,5 +1,6 @@
 from Figure import Figure
 
+
 class Square(Figure):
 
     def __init__(self, name, side):
@@ -18,6 +19,7 @@ class Square(Figure):
     def get_perimetr(self):
         self.perimetr = 4 * self.side
         print('is perimetr', self.name, self.perimetr)
+
 
 square1 = Square('square1', 2)
 square2 = Square('square2', 4)
