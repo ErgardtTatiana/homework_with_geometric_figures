@@ -1,4 +1,4 @@
-from src.Figure import Figure
+from .Figure import Figure
 import math
 
 
@@ -23,8 +23,6 @@ class Triangle(Figure):
         super().__init__(name)
         self._area = None
         self._perimeter = None
-        if (side1 <= 0) or (side2 <= 0) or (side3 <= 0):
-            raise ValueError('Передана не геометрическая фигура')
         if ((side1 + side2) < side3) or ((side2 + side3) < side1) or ((side1 + side3) < side2):
             raise ValueError('Не выполнено основное правило существования треугольника')
         self.side1 = side1
