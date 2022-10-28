@@ -22,5 +22,3 @@ class Circle(Figure):
         self.radius = radius
         if (radius <= 0):
             raise ValueError('Передана не геометрическая фигура')
-
-
